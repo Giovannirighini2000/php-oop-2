@@ -7,13 +7,15 @@ class Prodotto {
   protected $prezzoProdotto;
   protected $CategoriaAnimaleTipo;
   protected $Cibo;
+  protected $Giocattolo;
 
-  public function __construct($codiceBarre, $nomeArticolo, $prezzoProdotto,CategoriaAnimaleTipo $CategoriaAnimaleTipo,Cibo $Cibo ) {
+  public function __construct($codiceBarre, $nomeArticolo, $prezzoProdotto,CategoriaAnimaleTipo $CategoriaAnimaleTipo,Cibo $Cibo,Giocattolo $Giocattolo ) {
     $this->codiceBarre = $codiceBarre;
     $this->nomeArticolo = $nomeArticolo;
     $this->prezzoProdotto = $prezzoProdotto;
     $this->CategoriaAnimaleTipo = $CategoriaAnimaleTipo;
     $this->Cibo = $Cibo;
+    $this->Giocattolo = $Giocattolo;
   }
 
   public function getCodiceBarre() {
