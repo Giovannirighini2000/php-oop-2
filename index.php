@@ -11,10 +11,10 @@ require_once './models/Trasportino.php';
 
 //  prodotto
 
- $prodotto1 = new Prodotto('COD-123456', 'Osso da gioco per animali', '10 euro',new CategoriaAnimaleTipo ('gatto'));
-var_dump($prodotto1);
-$prodotto2 = new Prodotto('COD-123456', 'Osso da gioco per animali', '10 euro',new CategoriaAnimaleTipo ('cane'));
-var_dump($prodotto2);
+ $prodotto1Cibo = new Prodotto('COD-1fdsfd56', 'Bau Bau', '10 euro',new CategoriaAnimaleTipo ('cane'),new Cibo ('secco'));
+var_dump($prodotto1Cibo);
+$prodotto2 = new Prodotto('COD-12f5436', 'felix',' 30 euro',new CategoriaAnimaleTipo ('gatto'),new Cibo ('morbido'));
+var_dump($prodotto2Cibo);
 
 
 
