@@ -22,11 +22,11 @@ var_dump($prodotto2Cibo);
 
 // esempio giocattolo
 
-$prodotto1Giocattolo = new Prodotto('COD-12f5436', 'felix',' 30 euro',new CategoriaAnimaleTipo ('gatto'),new Cibo ('non e cibo'),new Giocattolo ('8 anni','plastica'));
+$prodotto1Giocattolo = new Prodotto('COD-12f5436', 'filo-attira-gatto',' 5 euro',new CategoriaAnimaleTipo ('gatto'),new Cibo ('non e cibo'),new Giocattolo ('8 anni','plastica'));
 var_dump($prodotto1Giocattolo);
 
 
-$prodotto2Giocattolo = new Prodotto('COD-12f5436', 'felix',' 30 euro',new CategoriaAnimaleTipo ('gatto'),new Cibo ('non e cibo'),new Giocattolo ('3 anni','plastica'));
+$prodotto2Giocattolo = new Prodotto('COD-12f5436', 'pallina-rimpalzante',' 10 euro',new CategoriaAnimaleTipo ('cane'),new Cibo ('non e cibo'),new Giocattolo ('3 anni','plastica'));
 var_dump($prodotto2Giocattolo);
 
 
