@@ -18,9 +18,17 @@ require_once './models/Trasportino.php';
 
 
 // prodotto extends in categoria 
-$categoriaAnimaleTipo = new CategoriaAnimaleTipo("COD-123456789", "Crocchette per cani",'10 euro', "Cani");
-var_dump($categoriaAnimaleTipo);
 
+// $categoriaAnimaleTipo = new CategoriaAnimaleTipo("COD-123456789", "Crocchette per cani",'10 euro', "Cani");
+// var_dump($categoriaAnimaleTipo);
+
+$AnimaleGatto = new AnimaleGatto('123456', 'Cibo per gatto', '10 euro', 'Gatto', 'Persiano', '10 cm', '20 metri', 'Bianco','5kg', '2 anni');
+
+var_dump($AnimaleGatto);
+
+$AnimaleCane = new AnimaleCane('123456', 'Cibo per cane', '10 euro', 'Cane', 'Persiano', '10 cm', '1 metri', 'marrone','115kg', '5 anni');
+
+var_dump($AnimaleCane);
 
 
 
