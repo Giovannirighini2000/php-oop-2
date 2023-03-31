@@ -1,19 +1,24 @@
 <?php
-require_once __DIR__ .'/Prodotto.php';
 
-class CategoriaAnimaleTipo extends Prodotto {
-    protected $tipoAnimale;
+
+class CategoriaAnimaleTipo {
+  protected $tipoAnimale;
+  // DA INSERIRE ICONA/IMG CON CONTROLLO IF IN BASE CANE E GATTO
   
-    public function __construct($codiceBarre, $nomeArticolo, $prezzoProdotto, $tipoAnimale) {
-      parent::__construct($codiceBarre, $nomeArticolo, $prezzoProdotto);
-      $this->tipoAnimale = $tipoAnimale;
-    }
-  
-    public function getTipoAnimale() {
-      return $this->tipoAnimale;
-    }
-  
-    public function setTipoAnimale($tipoAnimale) {
-      $this->tipoAnimale = $tipoAnimale;
-    }
+  public function __construct($tipoAnimale) {
+    $this->setTipoAnimale($tipoAnimale);
   }
+  
+  public function getTipoAnimale() {
+    return $this->tipoAnimale;
+  }
+  
+  public function setTipoAnimale($tipoAnimale) {
+    $valoriValidi = array("gatto", "cane");
+    if (!in_array($tipoAnimale, $valoriValidi)) {
+      $tipoAnimale = "non definito";
+    }
+    $this->tipoAnimale = $tipoAnimale;
+  }
+}
+
