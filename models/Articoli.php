@@ -4,8 +4,8 @@ require_once __DIR__ . '/Prodotto.php';
 class Articolo extends Prodotto {
     protected $tipo;
   
-    public function __construct($codiceBarre, $nomeArticolo, $prezzoProdotto,CategoriaAnimaleTipo $CategoriaAnimaleTipo, $tipo) {
-        parent::__construct($codiceBarre, $nomeArticolo, $prezzoProdotto, $CategoriaAnimaleTipo);
+    public function __construct($codiceBarre, $nomeArticolo, $prezzoProdotto,$imgProdotto,CategoriaAnimaleTipo $CategoriaAnimaleTipo, $tipo) {
+        parent::__construct($codiceBarre, $nomeArticolo, $prezzoProdotto,$imgProdotto, $CategoriaAnimaleTipo);
         $this->setTipo($tipo);
     }
   

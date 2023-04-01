@@ -6,12 +6,14 @@ class Prodotto {
   protected $codiceBarre;
   protected $nomeArticolo;
   protected $prezzoProdotto;
+  protected $imgProdotto;
   protected $CategoriaAnimaleTipo;
 
-  public function __construct($codiceBarre, $nomeArticolo, $prezzoProdotto,CategoriaAnimaleTipo $CategoriaAnimaleTipo) {
+  public function __construct($codiceBarre, $nomeArticolo, $prezzoProdotto,$imgProdotto,CategoriaAnimaleTipo $CategoriaAnimaleTipo) {
     $this->codiceBarre = $codiceBarre;
     $this->nomeArticolo = $nomeArticolo;
     $this->prezzoProdotto = $prezzoProdotto;
+    $this->imgProdotto = $imgProdotto;
     $this->CategoriaAnimaleTipo = $CategoriaAnimaleTipo;
     
   }
@@ -38,5 +40,12 @@ class Prodotto {
 
   public function setPrezzo($prezzoProdotto) {
     $this->prezzoProdotto = $prezzoProdotto;
+  }
+  public function getImgProdotto() {
+    return $this->imgProdotto;
+  }
+
+  public function setImgProdotto($imgProdotto) {
+    $this->imgProdotto = $imgProdotto;
   }
 }
