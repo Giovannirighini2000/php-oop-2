@@ -1,4 +1,5 @@
 <?php
+include_once __DIR__ .'/CategoriaAnimaleTipo.php';
 
 
 class Prodotto {
@@ -6,14 +7,12 @@ class Prodotto {
   protected $nomeArticolo;
   protected $prezzoProdotto;
   protected $CategoriaAnimaleTipo;
-  protected $Articolo;
 
-  public function __construct($codiceBarre, $nomeArticolo, $prezzoProdotto,CategoriaAnimaleTipo $CategoriaAnimaleTipo,Articolo $Articolo) {
+  public function __construct($codiceBarre, $nomeArticolo, $prezzoProdotto,CategoriaAnimaleTipo $CategoriaAnimaleTipo) {
     $this->codiceBarre = $codiceBarre;
     $this->nomeArticolo = $nomeArticolo;
     $this->prezzoProdotto = $prezzoProdotto;
     $this->CategoriaAnimaleTipo = $CategoriaAnimaleTipo;
-    $this->Articolo = $Articolo;
     
   }
 
@@ -25,11 +24,11 @@ class Prodotto {
     $this->codiceBarre = $codiceBarre;
   }
 
-  public function getNome() {
+  public function getNomeArticolo() {
     return $this->nomeArticolo;
   }
 
-  public function setNome($nomeArticolo) {
+  public function setNomeArticolo($nomeArticolo) {
     $this->nomeArticolo = $nomeArticolo;
   }
 
