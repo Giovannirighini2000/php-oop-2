@@ -1,11 +1,7 @@
 <?php
-require_once './models/Cibo.php';
-require_once './models/Giocattolo.php';
-require_once './models/Cuccia.php';
+require_once './models/Articoli.php';
 require_once './models/CategoriaAnimaleTipo.php';
-require_once './models/Ciotola.php';
 require_once './models/Prodotto.php';
-require_once './models/Trasportino.php';
 
 
 
@@ -14,19 +10,19 @@ require_once './models/Trasportino.php';
 
 //  esempio cibo
 
- $prodotto1Cibo = new Prodotto('COD-1fdsfd56', 'Bau Bau', '10 euro',new CategoriaAnimaleTipo ('cane'),new Cibo ('secco'),new Giocattolo ('non e un giocattolo','null'));
+ $prodotto1Cibo = new Prodotto('COD-1fdsfd56', 'Bau Bau', '10 euro',new CategoriaAnimaleTipo ('cane'),new Articolo ('cibo'));
 var_dump($prodotto1Cibo);
 
-$prodotto2Cibo = new Prodotto('COD-12f5436', 'felix',' 30 euro',new CategoriaAnimaleTipo ('gatto'),new Cibo ('morbido'),new Giocattolo ('non e un giocattolo','null'));
+$prodotto2Cibo = new Prodotto('COD-12f5436', 'felix',' 30 euro',new CategoriaAnimaleTipo ('gatto'),new Articolo ('cibo'));
 var_dump($prodotto2Cibo);
 
 // esempio giocattolo
 
-$prodotto1Giocattolo = new Prodotto('COD-12f5436', 'filo-attira-gatto',' 5 euro',new CategoriaAnimaleTipo ('gatto'),new Cibo ('non e cibo'),new Giocattolo ('8 anni','plastica'));
+$prodotto1Giocattolo = new Prodotto('COD-12f5436', 'filo-attira-gatto',' 5 euro',new CategoriaAnimaleTipo ('gatto'),new Articolo ('giocattolo'));
 var_dump($prodotto1Giocattolo);
 
 
-$prodotto2Giocattolo = new Prodotto('COD-12f5436', 'pallina-rimpalzante',' 10 euro',new CategoriaAnimaleTipo ('cane'),new Cibo ('non e cibo'),new Giocattolo ('3 anni','plastica'));
+$prodotto2Giocattolo = new Prodotto('COD-12f5436', 'pallina-rimpalzante',' 10 euro',new CategoriaAnimaleTipo ('cane'),new Articolo ('giocattolo'));
 var_dump($prodotto2Giocattolo);
 
 
