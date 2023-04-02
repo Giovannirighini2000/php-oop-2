@@ -81,58 +81,105 @@ $categoriaCane = new CategoriaAnimaleTipo('cane');
 </head>
 <body>
     <h1>Product Catalog</h1>
-    <div class="product-grid">
-        <?php
-            $productsCat = [
-                $prodotto1Cibo,
+    <!-- <div class="product-grid">
+         // //  
+            // // $productsCat = [
+            //     $prodotto1Cibo,
                 
-                $prodotto1Giocattolo,
+            //     $prodotto1Giocattolo,
                 
-                $prodotto1Cuccia,
+            //     $prodotto1Cuccia,
                 
-                $prodotto1Ciotola,
+            //     $prodotto1Ciotola,
                 
-            ];
-            $productsDog = [
+            // ];
+            // $productsDog = [
                 
-                $prodotto2Cibo,
+            //     $prodotto2Cibo,
                 
-                $prodotto2Giocattolo,
+            //     $prodotto2Giocattolo,
                 
-                $prodotto2Cuccia,
+            //     $prodotto2Cuccia,
                 
-                $prodotto2Ciotola
-            ];
+            //     $prodotto2Ciotola
+            // ]; -->
                 
             
 
-            foreach ($productsCat as $product) {
-                echo "<div class='card'>";
-                echo "<div class='icona-prod'><img src='" . $product->getImgProdotto() . "'></div>";
-                echo "<h2>" . $product->getNomeArticolo() . "</h2>";
-                echo "<p><strong>Code:</strong> " . $product->getCodiceBarre() . "</p>";
-                echo "<p><strong>Price:</strong> " . $product->getPrezzo() . "</p>";
-                echo "<p><strong>Category:</strong> " . $product->getTipo() . "</p>";
-                echo "<div class='icona-size'><strong>Animal Type:</strong> " . $categoriaGatto->getIconaAnimale() . "</div>";
-                echo "</div>";
-            };
+            <!-- // foreach ($productsCat as $product) { -->
+            <!-- //     echo "<div class='card'>";
+            //     echo "<div class='icona-prod'><img src='" . $product->getImgProdotto() . "'></div>";
+            //     echo "<h2>" . $product->getNomeArticolo() . "</h2>";
+            //     echo "<p><strong>Code:</strong> " . $product->getCodiceBarre() . "</p>";
+            //     echo "<p><strong>Price:</strong> " . $product->getPrezzo() . "</p>";
+            //     echo "<p><strong>Category:</strong> " . $product->getTipo() . "</p>";
+            //     echo "<div class='icona-size'><strong>Animal Type:</strong> " . $categoriaGatto->getIconaAnimale() . "</div>";
+            //     echo "</div>";
+            // }; -->
             // product getIconaAnimale() non sono riuscito cosi diviso
             
-            foreach ($productsDog as $product) {
-                echo "<div class='card'>";
-                echo "<div class='icona-prod'><img src='" . $product->getImgProdotto() . "'></div>";
-                echo "<h2>" . $product->getNomeArticolo() . "</h2>";
-                echo "<p><strong>Code:</strong> " . $product->getCodiceBarre() . "</p>";
-                echo "<p><strong>Price:</strong> " . $product->getPrezzo() . "</p>";
-                echo "<p><strong>Category:</strong> " . $product->getTipo() . "</p>";
-                echo "<div class='icona-size'><strong>Animal Type:</strong> " . $categoriaCane->getIconaAnimale() . "</div>";
-                echo "</div>";
-            };
+            // foreach ($productsDog as $product) {
+            <!-- //     echo "<div class='card'>";
+            //     echo "<div class='icona-prod'><img src='" . $product->getImgProdotto() . "'></div>";
+            //     echo "<h2>" . $product->getNomeArticolo() . "</h2>";
+            //     echo "<p><strong>Code:</strong> " . $product->getCodiceBarre() . "</p>";
+            //     echo "<p><strong>Price:</strong> " . $product->getPrezzo() . "</p>";
+            //     echo "<p><strong>Category:</strong> " . $product->getTipo() . "</p>";
+            //     echo "<div class='icona-size'><strong>Animal Type:</strong> " . $categoriaCane->getIconaAnimale() . "</div>";
+            //     echo "</div>"; -->
+            // };
 
             // echo $categoriaGatto->getIconaAnimale();
             // echo $categoriaGatto2->getIconaAnimale();
+            // echo . . per concatenazione stringhe
              
+        // 
+        <div class="product-grid">
+    <?php
+    $productsCat = [
+        $prodotto1Cibo,
+        $prodotto1Giocattolo,
+        $prodotto1Cuccia,
+        $prodotto1Ciotola,
+    ];
+
+    $productsDog = [
+        $prodotto2Cibo,
+        $prodotto2Giocattolo,
+        $prodotto2Cuccia,
+        $prodotto2Ciotola
+    ];
+
+    foreach ($productsCat as $product) {
         ?>
+        <div class='card'>
+            <div class='icona-prod'><img src='<?php echo $product->getImgProdotto(); ?>'></div>
+            <h2><?php echo $product->getNomeArticolo(); ?></h2>
+            <p><strong>Code:</strong> <?php echo $product->getCodiceBarre(); ?></p>
+            <p><strong>Price:</strong> <?php echo $product->getPrezzo(); ?></p>
+            <p><strong>Category:</strong> <?php echo $product->getTipo(); ?></p>
+            <div class='icona-size'><strong>Animal Type:</strong> <?php echo $categoriaGatto->getIconaAnimale(); ?></div>
+        </div>
+        <?php
+    }
+
+    foreach ($productsDog as $product) {
+        ?>
+        <div class='card'>
+            <div class='icona-prod'><img src='<?php echo $product->getImgProdotto(); ?>'></div>
+            <h2><?php echo $product->getNomeArticolo(); ?></h2>
+            <p><strong>Code:</strong> <?php echo $product->getCodiceBarre(); ?></p>
+            <p><strong>Price:</strong> <?php echo $product->getPrezzo(); ?></p>
+            <p><strong>Category:</strong> <?php echo $product->getTipo(); ?></p>
+            <div class='icona-size'><strong>Animal Type:</strong> <?php echo $categoriaCane->getIconaAnimale(); ?></div>
+        </div>
+        <?php
+    }
+    // metodo visto in classe senza concatenazione per luninione di stringhe
+    ?>
+</div>
+
+</div>
     </div>
 </body>
 </html>
