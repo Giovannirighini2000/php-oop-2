@@ -1,30 +1,33 @@
 <?php
 require_once __DIR__ . '/Prodotto.php';
+require_once __DIR__ . '/../traits/trait.php';
+
 
 class Articolo extends Prodotto {
+  // riporto uso del trait di validaTipo
+    use Validator;
+
     protected $tipo;
-  
-    public function __construct($codiceBarre, $nomeArticolo, $prezzoProdotto,$imgProdotto,CategoriaAnimaleTipo $CategoriaAnimaleTipo, $tipo) {
-        parent::__construct($codiceBarre, $nomeArticolo, $prezzoProdotto,$imgProdotto, $CategoriaAnimaleTipo);
+
+    public function __construct($codiceBarre, $nomeArticolo, $prezzoProdotto, $imgProdotto, CategoriaAnimaleTipo $CategoriaAnimaleTipo, $tipo) {
+        parent::__construct($codiceBarre, $nomeArticolo, $prezzoProdotto, $imgProdotto, $CategoriaAnimaleTipo);
         $this->setTipo($tipo);
     }
-  
+
     public function getTipo() {
-      return $this->tipo;
+        return $this->tipo;
     }
-  
+
     public function setTipo($tipo) {
-        $valoriValidiCibo = array("cibo", "cuccia","ciotola","giocattolo","trasportino");
-        if (!in_array($tipo, $valoriValidiCibo)) {
-            $tipo = "non un prodotto presente nel nostro punto vendita, Riprova con altri prodotti";
-        }
+        $this->validateTipo($tipo);
         $this->tipo = $tipo;
     }
+
     public function getCategoriaAnimaleTipo() {
         return $this->CategoriaAnimaleTipo;
-      }
-    
-      public function setIconaAnimale($CategoriaAnimaleTipo) {
+    }
+
+    public function setIconaAnimale($CategoriaAnimaleTipo) {
         $this->CategoriaAnimaleTipo = $CategoriaAnimaleTipo;
-      }
+    }
 }
