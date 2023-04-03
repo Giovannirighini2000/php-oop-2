@@ -20,4 +20,11 @@ class Articolo extends Prodotto {
         }
         $this->tipo = $tipo;
     }
+    public function getCategoriaAnimaleTipo() {
+        return $this->CategoriaAnimaleTipo;
+      }
+    
+      public function setIconaAnimale($CategoriaAnimaleTipo) {
+        $this->CategoriaAnimaleTipo = $CategoriaAnimaleTipo;
+      }
 }
